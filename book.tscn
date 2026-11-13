@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bj2qfet7cg1vu"]
+
+[ext_resource type="Texture2D" uid="uid://tjtkfn68ib8c" path="res://tiles/tome_01.png" id="1_kh36y"]
+[ext_resource type="Script" uid="uid://bs26mk1yf730o" path="res://book.gd" id="1_y0hms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1crhd"]
+size = Vector2(81, 107)
+
+[node name="Book" type="CharacterBody2D" unique_id=1438161068]
+physics_interpolation_mode = 2
+script = ExtResource("1_y0hms")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=780271151]
+position = Vector2(1.000061, 1)
+scale = Vector2(2.1406255, 2.140625)
+texture = ExtResource("1_kh36y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=656837702]
+position = Vector2(-2.0000305, 2.9999962)
+rotation = 0.2617994
+shape = SubResource("RectangleShape2D_1crhd")
