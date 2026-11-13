@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bdodnm5jcrwbi"]
+
+[ext_resource type="Texture2D" uid="uid://b1bfkd5e48hp4" path="res://images/slime.png" id="1_2d52u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1crhd"]
+radius = 66.45502
+height = 220.05365
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4l1t8"]
+bg_color = Color(1, 0.34478134, 0.2628808, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppcr1"]
+bg_color = Color(0, 0.71494144, 0.41546732, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="slime" type="CharacterBody2D" unique_id=962180313]
+position = Vector2(352, 345)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1833957317]
+position = Vector2(-21.00001, 54)
+scale = Vector2(0.15341797, 0.14121093)
+texture = ExtResource("1_2d52u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1844808006]
+position = Vector2(-21.999998, 53)
+rotation = 1.43117
+shape = SubResource("CapsuleShape2D_1crhd")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1949817659]
+offset_left = -146.0
+offset_top = -95.0
+offset_right = 109.0
+offset_bottom = -46.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/background = SubResource("StyleBoxFlat_4l1t8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ppcr1")
+value = 30.0
