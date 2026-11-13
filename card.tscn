@@ -1,5 +1,13 @@
 [gd_scene format=3 uid="uid://d25deefcthbx8"]
 
+[ext_resource type="Texture2D" uid="uid://d22iqphu4jaik" path="res://images/card.png" id="1_kikvd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_21yf0"]
+bg_color = Color(3.3691526e-06, 0.6968085, 0.6085907, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1crhd"]
+bg_color = Color(0.9992675, 0.3067772, 0.48899722, 1)
+
 [node name="card" type="Control" unique_id=1559835497]
 layout_mode = 3
 anchors_preset = 0
@@ -8,5 +16,23 @@ offset_bottom = 40.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=943433243]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 178.0
+offset_bottom = 234.0
+
+[node name="CardName" type="Label" parent="VBoxContainer" unique_id=661536643]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_21yf0")
+text = "card name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardIllust" type="TextureRect" parent="VBoxContainer" unique_id=1909300584]
+layout_mode = 2
+texture = ExtResource("1_kikvd")
+
+[node name="CardDesc" type="Label" parent="VBoxContainer" unique_id=240155233]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1crhd")
+text = "500 dmg"
+horizontal_alignment = 1
+vertical_alignment = 1
