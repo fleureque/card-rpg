@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bil5peklaostt"]
+
+[ext_resource type="Texture2D" uid="uid://d4aqst4s7dctn" path="res://images/player.png" id="1_4flbx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8kjr5"]
+radius = 103.23169
+height = 206.46338
+
+[node name="Player" type="Area2D" unique_id=1032043272]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1615331365]
+position = Vector2(1003.00006, 133.99998)
+scale = Vector2(0.17260742, 0.17529298)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1709979248]
+position = Vector2(983.00006, 165)
+rotation = 1.4922565
+shape = SubResource("CapsuleShape2D_8kjr5")
